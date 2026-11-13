@@ -46,6 +46,46 @@ export default function FAQ() {
         </>
       ),
     },
+    {
+      question: "How do I configure Aider?",
+      answer: (
+        <>
+          <p className="mb-2">
+            Configure Aider to use AGENTS.md in <code>.aider.conf.yml</code>:
+          </p>
+          <div className="w-full flex justify-center">
+            <CodeExample
+              code="read: AGENTS.md"
+              compact
+              heightClass="min-h-[48px]"
+              centerVertically
+            />
+          </div>
+        </>
+      ),
+    },
+    {
+      question: "How do I configure Gemini CLI?",
+      answer: (
+        <>
+          <p className="mb-2">
+            Configure Gemini CLI to use AGENTS.md in <code>.gemini/settings.json</code>:
+          </p>
+          <div className="w-full flex justify-center">
+            <CodeExample
+              code='{
+  "context": {
+    "fileName": "AGENTS.md"
+  },
+}'
+              compact
+              heightClass="min-h-[48px]"
+              centerVertically
+            />
+          </div>
+        </>
+      ),
+    },
   ];
 
   return (

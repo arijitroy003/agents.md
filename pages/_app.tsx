@@ -1,11 +1,12 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/next";
 export default function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
       <title>AGENTS.md</title>
-      <meta name="description" content="AGENTS.md is a simple, open format for guiding coding agents, used by over 20k open-source projects. Think of it as a README for agents." />
+      <meta name="description" content="AGENTS.md is a simple, open format for guiding coding agents, used by over 60k open-source projects. Think of it as a README for agents." />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="AGENTS.md" />
       <meta name="twitter:description" content="AGENTS.md is a simple, open format for guiding coding agents. Think of it as a README for agents." />
@@ -18,5 +19,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta property="og:image" content="https://agents.md/og.png" />
     </Head>
     <Component {...pageProps} />
+    <Analytics />
   </>;
 }
